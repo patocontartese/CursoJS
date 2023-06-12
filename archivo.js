@@ -1,3 +1,4 @@
+/* Primera pre entrega
 //Preguntados
 let nombreUsuario = prompt("Indicanos tu nombre de usuario!");
 //Nombre vacío 
@@ -10,7 +11,7 @@ while((nombreUsuario == '') || (nombreUsuario == ' ') ){
 alert("Bienvenido/a "+ nombreUsuario +" vamos a jugar al preguntados!")
 
 let mensaje = prompt("Elegí una categoría: (d-DEPORTES) (e-ENTRETENIMIENTO)");
-
+/* Primera pre entrega
 //creo una variable global para calcular el total del puntaje
 let puntaje = 0;
 //Ciclo deportes 
@@ -245,8 +246,67 @@ function incrementarPuntaje(puntos){
     puntaje = puntaje + puntos;
     alert("Tu puntaje es de: "+puntaje+" puntos!");
 }
+*/
+//segunda pre entrega;
+// Array
+const preguntas = [{
+        id: 1,
+        categoria: "deportes",
+        pregunta: "¿Quien ganó el mundial 2022 de fútbol?",
+        dificultad: 1
+    },
+   {
+        id: 2,
+        categoria: "entretenimiento",
+        pregunta: "¿En que país transcurre la serie de La Casa De Papel?",
+        dificultad: 1
+    },
+   {
+       id: 3,
+       categoria: "deportes",
+       pregunta: "¿En que equipo de fútbol juega Paulo Dybala?",
+       dificultad: 2
+    },
+   {
+       id: 4,
+       categoria: "entretenimiento",
+       pregunta: "¿Qué película Argentina estuvo nominada a los Oscars 2023?",
+       dificultad: 2
+    },    
+   {
+       id: 5,
+       categoria: "deportes",
+       pregunta: "¿Qué equipo de fútbol ganó la Champions League 2023?",
+       dificultad: 3
+    },
+   {
+       id: 6,
+       categoria: "entretenimiento",
+       pregunta: "¿Quien es el director de la película Titanic?",
+       dificultad: 3
+    }
+];
+//funcion para poder filtrar por dificultad
+function filtrarPorDificultad(dificultad){;
+    const filtrados = preguntas.filter((preg)=>preg.dificultad == dificultad);
+    return filtrados;
+   }
 
+//dato de entrada
+let dificultadElegida = parseFloat(prompt('Ingresa la dificultad del juego del 1-2-3 o ingrese 0-para salir'));
 
+while(dificultadElegida != 0){
+    if(dificultadElegida == 1 || dificultadElegida == 2 || dificultadElegida == 3){
+        //ya tenemos un numero valido
+        const pregsFiltradas = filtrarPorDificultad(dificultadElegida);
+        console.table(pregsFiltradas);
+        
+    }else{
+        alert('Ingrese un número valido por favor');
+    }
+    dificultadElegida = parseFloat(prompt('Ingresa la dificultad del juego del 1-2-3 o ingrese 0-para salir'));
+   }
+   
 
 
 
