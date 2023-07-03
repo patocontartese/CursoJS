@@ -1,315 +1,142 @@
-/* Primera pre entrega
-//Preguntados
-let nombreUsuario = prompt("Indicanos tu nombre de usuario!");
-//Nombre vacío 
-while((nombreUsuario == '') || (nombreUsuario == ' ') ){
-    alert('Nombre invalido');
-    nombreUsuario = prompt('Ingresa tu nombre');
-}
-
-
-alert("Bienvenido/a "+ nombreUsuario +" vamos a jugar al preguntados!")
-
-let mensaje = prompt("Elegí una categoría: (d-DEPORTES) (e-ENTRETENIMIENTO)");
-/* Primera pre entrega
-//creo una variable global para calcular el total del puntaje
-let puntaje = 0;
-//Ciclo deportes 
-while(mensaje.toLowerCase() == "d"){
-    alert("Muy bien, vamos con la pregunta...")
-    alert("¿En que equipo juega Paulo Dybala...?");
-    let respuesta = prompt("1-ROMA\n2-BARCELONA\n3-LIVERPOOL\n4-PSG");
-    //condicional para evaluar la pregunta
-   switch(respuesta){
-    case "1":
-        alert("Respuesta correcta, sumaste 3 puntos!");
-        incrementarPuntaje(3);
-        break;
-    case "2":
-        alert("Respuesta incorrecta, no sumaste puntos.");
-        incrementarPuntaje(0)
-        break;
-    case "3":
-        alert("Respuesta incorrecta, no sumaste puntos.");
-        incrementarPuntaje(0)
-        break;
-    case "4":
-        alert("Respuesta incorrecta, no sumaste puntos.");
-        incrementarPuntaje(0)
-        break;         
-   }
-
-   mensaje = alert("Proba una vez más!")
-   let mensaje2 = prompt("Elegí una categoría: (d-DEPORTES) (e-ENTRETENIMIENTO)");
-
-
-//Ciclo deportes 
-while(mensaje2.toLowerCase() == "d"){
-    alert("Muy bien, vamos con la pregunta...")
-    alert("¿En que equipo juega Julian Alvárez...?");
-    let respuesta2 = prompt("1-MAN.CITY\n2-MAN.UNITED\n3-INTER\n4-PSG");
-    //condicional para evaluar la pregunta
-   switch(respuesta2){
-    case "1":
-        alert("Respuesta correcta, sumaste 3 puntos!");
-        incrementarPuntaje(3);
-        break;
-    case "2":
-        alert("Respuesta incorrecta, no sumaste puntos.");
-        incrementarPuntaje(0)
-        break;
-    case "3":
-        alert("Respuesta incorrecta, no sumaste puntos.");
-        incrementarPuntaje(0)
-        break;
-    case "4":
-        alert("Respuesta incorrecta, no sumaste puntos.");
-        incrementarPuntaje(0)
-        break;         
-   }
-
-   mensaje2 = alert("Gracias por jugar!")
-}   
-//Ciclo entretenimiento
-while(mensaje2.toLowerCase() == "e"){
-    alert("Muy bien, vamos con la pregunta...")
-    alert("¿Que pélicula Argentina fue nominada a los Oscars en 2023...?");
-    let respuesta2 = prompt("1-CASADOS CON HIJOS\n2-9 REYNAS\n3-ARGENTINA 1985\n4-METEGOL");
-    //condicional para evaluar la pregunta
-   switch(respuesta2){
-    case "1":
-        alert("Respuesta incorrecta, no sumaste puntos.");
-        incrementarPuntaje(0)
-        break;
-    case "2":
-        alert("Respuesta incorrecta, no sumaste puntos.");
-        incrementarPuntaje(0)
-        break;
-    case "3":
-        alert("Respuesta correcta, sumaste 3 puntos!");
-        incrementarPuntaje(3);
-        break;
-    case "4":
-        alert("Respuesta incorrecta, no sumaste puntos.");
-        incrementarPuntaje(0)
-        break;         
-   }
-
-   mensaje2 = alert("Gracias por jugar!")
-}   
-}   
-//Ciclo entretenimiento
-while(mensaje.toLowerCase() == "e"){
-    alert("Muy bien, vamos con la pregunta...")
-    alert("¿Que actor ganó el Oscar a mejor actor en 2023...?");
-    let respuesta = prompt("1-RYAN REYNOLDS\n2-BRAD PITT\n3-BRENDAN FRASER\n4-RICARDO DARIN");
-    //condicional para evaluar la pregunta
-   switch(respuesta){
-    case "1":
-        alert("Respuesta incorrecta, no sumaste puntos.");
-        incrementarPuntaje(0)
-        break;
-    case "2":
-        alert("Respuesta incorrecta, no sumaste puntos.");
-        incrementarPuntaje(0)
-        break;
-    case "3":
-        alert("Respuesta correcta, sumaste 3 puntos!");
-        incrementarPuntaje(3);
-        break;
-    case "4":
-        alert("Respuesta incorrecta, no sumaste puntos.");
-        incrementarPuntaje(0)
-        break;         
-   }
-
-   mensaje = alert("Proba una vez más!")
-   let mensaje2 = prompt("Elegí una categoría: (d-DEPORTES) (e-ENTRETENIMIENTO)");
-
-
-//Ciclo deportes 
-while(mensaje2.toLowerCase() == "d"){
-    alert("Muy bien, vamos con la pregunta...")
-    alert("¿En que equipo juega Julian Alvárez...?");
-    let respuesta2 = prompt("1-MAN.CITY\n2-MAN.UNITED\n3-INTER\n4-PSG");
-    //condicional para evaluar la pregunta
-   switch(respuesta2){
-    case "1":
-        alert("Respuesta correcta, sumaste 3 puntos!");
-        incrementarPuntaje(3);
-        break;
-    case "2":
-        alert("Respuesta incorrecta, no sumaste puntos.");
-        incrementarPuntaje(0)
-        break;
-    case "3":
-        alert("Respuesta incorrecta, no sumaste puntos.");
-        incrementarPuntaje(0)
-        break;
-    case "4":
-        alert("Respuesta incorrecta, no sumaste puntos.");
-        incrementarPuntaje(0)
-        break;         
-   }
-
-   mensaje2 = alert("Gracias por jugar!")
-}   
-//Ciclo entretenimiento
-while(mensaje2.toLowerCase() == "e"){
-    alert("Muy bien, vamos con la pregunta...")
-    alert("¿Que pélicula Argentina fue nominada a los Oscars en 2023...?");
-    let respuesta2 = prompt("1-CASADOS CON HIJOS\n2-9 REYNAS\n3-ARGENTINA 1985\n4-METEGOL");
-    //condicional para evaluar la pregunta
-   switch(respuesta2){
-    case "1":
-        alert("Respuesta incorrecta, no sumaste puntos.");
-        incrementarPuntaje(0)
-        break;
-    case "2":
-        alert("Respuesta incorrecta, no sumaste puntos.");
-        incrementarPuntaje(0)
-        break;
-    case "3":
-        alert("Respuesta correcta, sumaste 3 puntos!");
-        incrementarPuntaje(3);
-        break;
-    case "4":
-        alert("Respuesta incorrecta, no sumaste puntos.");
-        incrementarPuntaje(0)
-        break;         
-   }
-
-   mensaje2 = alert("Gracias por jugar!")
- }   
-}
-
-
-let mensaje2 = prompt("Elegí una categoría: (d-DEPORTES) (e-ENTRETENIMIENTO)");
-
-
-//Ciclo deportes 
-while(mensaje2.toLowerCase() == "d"){
-    alert("Muy bien, vamos con la pregunta...")
-    alert("¿En que equipo juega Julian Alvárez...?");
-    let respuesta2 = prompt("1-MAN.CITY\n2-MAN.UNITED\n3-INTER\n4-PSG");
-    //condicional para evaluar la pregunta
-   switch(respuesta2){
-    case "1":
-        alert("Respuesta correcta, sumaste 3 puntos!");
-        incrementarPuntaje(3);
-        break;
-    case "2":
-        alert("Respuesta incorrecta, no sumaste puntos.");
-        incrementarPuntaje(0)
-        break;
-    case "3":
-        alert("Respuesta incorrecta, no sumaste puntos.");
-        incrementarPuntaje(0)
-        break;
-    case "4":
-        alert("Respuesta incorrecta, no sumaste puntos.");
-        incrementarPuntaje(0)
-        break;         
-   }
-
-   mensaje2 = alert("Gracias por jugar!")
-}   
-//Ciclo entretenimiento
-while(mensaje2.toLowerCase() == "e"){
-    alert("Muy bien, vamos con la pregunta...")
-    alert("¿Que pélicula Argentina fue nominada a los Oscars en 2023...?");
-    let respuesta2 = prompt("1-CASADOS CON HIJOS\n2-9 REYNAS\n3-ARGENTINA 1985\n4-METEGOL");
-    //condicional para evaluar la pregunta
-   switch(respuesta2){
-    case "1":
-        alert("Respuesta incorrecta, no sumaste puntos.");
-        incrementarPuntaje(0)
-        break;
-    case "2":
-        alert("Respuesta incorrecta, no sumaste puntos.");
-        incrementarPuntaje(0)
-        break;
-    case "3":
-        alert("Respuesta correcta, sumaste 3 puntos!");
-        incrementarPuntaje(3);
-        break;
-    case "4":
-        alert("Respuesta incorrecta, no sumaste puntos.");
-        incrementarPuntaje(0)
-        break;         
-   }
-
-   mensaje2 = alert("Gracias por jugar!")
-}   
-//uso una funcion para calcular el total del puntaje
-function incrementarPuntaje(puntos){
-    puntaje = puntaje + puntos;
-    alert("Tu puntaje es de: "+puntaje+" puntos!");
-}
-*/
-//segunda pre entrega;
-// Array
-const preguntas = [{
-        id: 1,
-        categoria: "deportes",
-        pregunta: "¿Quien ganó el mundial 2022 de fútbol?",
-        dificultad: 1
+const preguntas = [
+    {
+        pregunta: "¿En qué equipo de fútbol juega Paulo Dybala...?",
+        respuestas:[
+            { texto: "Barcelona", correcta: false},
+            { texto: "Roma", correcta: true},
+            { texto: "Liverpool", correcta: false},
+            { texto: "PSG", correcta: false},
+        ]
     },
-   {
-        id: 2,
-        categoria: "entretenimiento",
-        pregunta: "¿En que país transcurre la serie de La Casa De Papel?",
-        dificultad: 1
+    {
+        pregunta: "¿Quién ganó el mundial 2022 de fútbol?",
+        respuestas:[
+            { texto: "Belgica", correcta: false},
+            { texto: "España", correcta: false},
+            { texto: "Francia", correcta: false},
+            { texto: "Argentina", correcta: true},
+        ]
     },
-   {
-       id: 3,
-       categoria: "deportes",
-       pregunta: "¿En que equipo de fútbol juega Paulo Dybala?",
-       dificultad: 2
+    {
+        pregunta: "¿En qué país transcurre la temporada 1 de la serie La Casa De Papel?",
+        respuestas:[
+            { texto: "España", correcta: true},
+            { texto: "Italia", correcta: false},
+            { texto: "Brasil", correcta: false},
+            { texto: "Francia", correcta: false},
+        ]
     },
-   {
-       id: 4,
-       categoria: "entretenimiento",
+    {
        pregunta: "¿Qué película Argentina estuvo nominada a los Oscars 2023?",
-       dificultad: 2
-    },    
-   {
-       id: 5,
-       categoria: "deportes",
-       pregunta: "¿Qué equipo de fútbol ganó la Champions League 2023?",
-       dificultad: 3
+        respuestas:[
+            { texto: "Casados con hijos", correcta: false},
+            { texto: "Argentina, 1985", correcta: true},
+            { texto: "El secreto de sus ojos", correcta: false},
+            { texto: "Madagascar", correcta: false},
+        ]
     },
-   {
-       id: 6,
-       categoria: "entretenimiento",
-       pregunta: "¿Quien es el director de la película Titanic?",
-       dificultad: 3
+    {
+        pregunta: "¿Qué equipo de fútbol ganó la Champions League 2023?",
+        respuestas:[
+            { texto: "Barcelona", correcta: false},
+            { texto: "Manchester City", correcta: true},
+            { texto: "Real Madrid", correcta: false},
+            { texto: "Inter de Milan", correcta: false},
+        ]
+    },
+    {
+        pregunta: "¿En qué equipo de fútbol juega Julian Alvárez...?",
+        respuestas:[
+            { texto: "River Plate", correcta: false},
+            { texto: "Chelsea", correcta: false},
+            { texto: "Manchester City", correcta: true},
+            { texto: "Barracas Central", correcta: false},
+        ]
     }
 ];
-//funcion para poder filtrar por dificultad
-function filtrarPorDificultad(dificultad){;
-    const filtrados = preguntas.filter((preg)=>preg.dificultad == dificultad);
-    return filtrados;
-   }
+const contenedorPreg = document.getElementById("question");
+const contenedorResp = document.getElementById("answer-buttons");
+const botonNext = document.getElementById("next-btn");
 
-//dato de entrada
-let dificultadElegida = parseFloat(prompt('Ingresa la dificultad del juego del 1-2-3 o ingrese 0-para salir'));
+//Inicializar el juego
 
-while(dificultadElegida != 0){
-    if(dificultadElegida == 1 || dificultadElegida == 2 || dificultadElegida == 3){
-        //ya tenemos un numero valido
-        const pregsFiltradas = filtrarPorDificultad(dificultadElegida);
-        console.table(pregsFiltradas);
-        
-    }else{
-        alert('Ingrese un número valido por favor');
+let pregActualIndex = 0;
+let marcador = 0;
+
+function EmpezarJuego(){
+    pregActualIndex = 0;
+    marcador = 0;
+    botonNext.innerHTML = "Siguiente";
+    mostrarPregunta();
+}
+// Funcion para mostrar pregunta y empezar el juego
+function mostrarPregunta(){
+    reset()
+     let preguntaActual = preguntas[pregActualIndex];
+     let preguntaNumero = pregActualIndex + 1;
+     contenedorPreg.innerHTML = preguntaNumero + ". "+ preguntaActual.pregunta;
+
+     preguntaActual.respuestas.forEach(respuesta => {
+         const boton = document.createElement("button");
+         boton.innerHTML= respuesta.texto;
+         boton.classList.add("btn");
+        contenedorResp.appendChild(boton);
+        if(respuesta.correcta){
+            boton.dataset.correct = respuesta.correcta;
+        }
+        boton.addEventListener("click", seleccionarResp);
+     })
+}
+// Funcion para que el boton de next solo se muestre si se selecciona alguna rta.
+function reset(){
+    botonNext.style.display = "none";
+    while(contenedorResp.firstChild){
+        contenedorResp.removeChild(contenedorResp.firstChild);
     }
-    dificultadElegida = parseFloat(prompt('Ingresa la dificultad del juego del 1-2-3 o ingrese 0-para salir'));
-   }
-   
+}
+// En caso de que se seleccione la opcion correcta colorear de verde la misma
+// y si se selecciona la opcion incorrecta colorear de rojo y mostrar
+// cual era la correcta (verde).
+function seleccionarResp(e){
+    const btnSeleccionado = e.target;
+    const rtaCorrecta = btnSeleccionado.dataset.correct === "true";
+    if(rtaCorrecta){
+        btnSeleccionado.classList.add("correcto");
+        marcador++;
+    }else{
+        btnSeleccionado.classList.add("incorrecto");
+    }
+    Array.from(contenedorResp.children).forEach(boton => {
+        if(boton.dataset.correct === "true"){
+            boton.classList.add("correcto");
+        }
+        boton.disabled = true;
+    });
+    botonNext.style.display = "block"
+}
+//Mostrar el marcador
+function mostrarMarcador(){
+    reset();
+    contenedorPreg.innerHTML = `Contestaste ${marcador} respuestas bien de ${preguntas.length} posibles!`
+    botonNext.innerHTML = "Jugar otra vez";
+    botonNext.style.display = "block"
+}
+// Eventos del boton next
+function eventoBotonNext(){
+    pregActualIndex++;
+    if(pregActualIndex < preguntas.length){
+        mostrarPregunta();
+    }else{
+        mostrarMarcador()
+    }
+}
 
-
-
-
-
-
+botonNext.addEventListener("click" , () =>{
+    if(pregActualIndex < preguntas.length){
+        eventoBotonNext();
+    }else{
+        EmpezarJuego()
+    }
+})
+EmpezarJuego();
+ 
