@@ -1,59 +1,5 @@
-const preguntas = [
-    {
-        pregunta: "¿En qué equipo de fútbol juega Paulo Dybala...?",
-        respuestas:[
-            { texto: "Barcelona", correcta: false},
-            { texto: "Roma", correcta: true},
-            { texto: "Liverpool", correcta: false},
-            { texto: "PSG", correcta: false},
-        ]
-    },
-    {
-        pregunta: "¿Quién ganó el mundial 2022 de fútbol?",
-        respuestas:[
-            { texto: "Belgica", correcta: false},
-            { texto: "España", correcta: false},
-            { texto: "Francia", correcta: false},
-            { texto: "Argentina", correcta: true},
-        ]
-    },
-    {
-        pregunta: "¿En qué país transcurre la temporada 1 de la serie La Casa De Papel?",
-        respuestas:[
-            { texto: "España", correcta: true},
-            { texto: "Italia", correcta: false},
-            { texto: "Brasil", correcta: false},
-            { texto: "Francia", correcta: false},
-        ]
-    },
-    {
-       pregunta: "¿Qué película Argentina estuvo nominada a los Oscars 2023?",
-        respuestas:[
-            { texto: "Casados con hijos", correcta: false},
-            { texto: "Argentina, 1985", correcta: true},
-            { texto: "El secreto de sus ojos", correcta: false},
-            { texto: "Madagascar", correcta: false},
-        ]
-    },
-    {
-        pregunta: "¿Qué equipo de fútbol ganó la Champions League 2023?",
-        respuestas:[
-            { texto: "Barcelona", correcta: false},
-            { texto: "Manchester City", correcta: true},
-            { texto: "Real Madrid", correcta: false},
-            { texto: "Inter de Milan", correcta: false},
-        ]
-    },
-    {
-        pregunta: "¿En qué equipo de fútbol juega Julian Alvárez...?",
-        respuestas:[
-            { texto: "River Plate", correcta: false},
-            { texto: "Chelsea", correcta: false},
-            { texto: "Manchester City", correcta: true},
-            { texto: "Barracas Central", correcta: false},
-        ]
-    }
-];
+let preguntas;
+obtenerJsonPregs();
 const contenedorPreg = document.getElementById("question");
 const contenedorResp = document.getElementById("answer-buttons");
 const botonNext = document.getElementById("next-btn");
@@ -121,7 +67,7 @@ function mostrarMarcador(){
     botonNext.innerHTML = "Jugar otra vez";
     botonNext.style.display = "block"
 }
-// Eventos del boton next
+//+ Eventos del boton next
 function eventoBotonNext(){
     pregActualIndex++;
     if(pregActualIndex < preguntas.length){
@@ -138,5 +84,15 @@ botonNext.addEventListener("click" , () =>{
         EmpezarJuego()
     }
 })
+//JSON
+async function obtenerJsonPregs(){
+    const URLJSON = "/preguntas.json";
+    const respuesta = await fetch(URLJSON);
+    const data = await respuesta.json();
+    console.log(data);
+    preguntas = data;
+    mostrarPregunta(preguntas);
+}
+
 EmpezarJuego();
  
